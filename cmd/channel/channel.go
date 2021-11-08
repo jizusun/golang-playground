@@ -10,8 +10,8 @@ func main() {
 
 	messages <- "ping"
 	messages <- "pong"
-	_ = <-messages
-	fmt.Println(_)
+	msg := <-messages
+	fmt.Println(msg)
 	//fmt.Println(msg)
 	messages <- "ping"
 	messages <- "pong"

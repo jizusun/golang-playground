@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	c := make(chan struct{})
 	go func() {
@@ -11,5 +13,5 @@ func main() {
 		c <- struct{}{}
 	}()
 	final := <-c
-	println(final)
+	fmt.Println(final)
 }
